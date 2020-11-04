@@ -16,7 +16,9 @@ router.get("/getPics", function(req, res, next) {
 
 router.post("/sendPic", function(req, res, next) {
   pictures.push(req.body);
-  res.json(pictures);
+  res.json({
+    status: "ok"
+  });
 })
 
 module.exports = router;
